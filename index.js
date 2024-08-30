@@ -61,7 +61,12 @@ locomotiveAnimation();
 //         scrub:true
 //     }
 // })
+// 
 
+
+// video//
+
+var vid = document.querySelector("#vid")
 
 function videoconAnimation() {
     var videoCon = document.querySelector('#video-container');
@@ -85,9 +90,13 @@ videoCon.addEventListener("mouseleave", function(){
 
 videoCon.addEventListener("mousemove",function(dets){
     gsap.to(playbtn,{
-        left:dets.x-50,
-        top:dets.y-50
+        left:dets.x-80,
+        top:dets.y-80
     })
+
+playbtn.addEventListener("onClick",function(){
+    vid.play();
+} )
     
 })
 }
